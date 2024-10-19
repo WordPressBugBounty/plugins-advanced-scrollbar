@@ -79,7 +79,6 @@ Like that plugin? Hate it? Want a new feature?  [Send your feedback](https://bPl
 
 🔥 **[Store Finder for WooCommerce](https://wordpress.org/plugins/store-finder/)** – Lists your store contact info professionally
 
-🔥 **[Logo Carousel](https://wordpress.org/plugins/responsive-client-logo-carousel-slider/)** – Clients logo carousel for WP
 
 == Installation ==
 
