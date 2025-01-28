@@ -272,13 +272,7 @@ if (!class_exists('WeDevs_Settings_API')):
         {
 
             $value = $this->get_option($args['id'], $args['section'], $args['std']);
-            $html = '<div class="field_main"><fieldset class="'.$args['classname'].'">';
-
-            if($args['classname'] == "free"){
-                $btnHtml = '<span class="popupBtn" id="popupBtn">Premium</span>';
-            }else{
-                $btnHtml = '';
-            }
+            $html = '<fieldset class="'.$args['classname'].'">';
 
             foreach ($args['options'] as $key => $label)
             {
@@ -288,7 +282,7 @@ if (!class_exists('WeDevs_Settings_API')):
             }
 
             $html .= $this->get_field_description($args);
-            $html .= '</fieldset>'. $btnHtml.'</div>';
+            $html .= '</fieldset>';
 
             echo $html;
         }
@@ -387,15 +381,10 @@ if (!class_exists('WeDevs_Settings_API')):
             $size = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
             $id = $args['section'] . '[' . $args['id'] . ']';
             $label = isset($args['options']['button_label']) ? $args['options']['button_label'] : __('Choose File');
-            if($args['classname'] == "free"){
-                $btnHtml = '<span class="popupBtn" id="popupBtn">Premium</span>';
-            }else{
-                $btnHtml = '';
-            }
 
-            $html = sprintf('<div class="field_main"><div class="'.$args['classname'].'" ><input type="text" class="%1$s-text wpsa-url" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', $size, $args['section'], $args['id'], $value);
+            $html = sprintf('<div class="'.$args['classname'].'" ><input type="text" class="%1$s-text wpsa-url" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', $size, $args['section'], $args['id'], $value);
             $html .= '<input type="button" class="button wpsa-browse" value="' . $label . '" />';
-            $html .= $this->get_field_description($args). '</div>'. $btnHtml.'</div>';
+            $html .= $this->get_field_description($args). '</div>';
 
             echo $html;
         }
@@ -428,16 +417,8 @@ if (!class_exists('WeDevs_Settings_API')):
             $value = esc_attr($this->get_option($args['id'], $args['section'], $args['std']));
             $size = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
 
-            
-
-            if($args['classname'] == "free"){
-                $btnHtml = '<span class="popupBtn" id="popupBtn">Premium</span>';
-            }else{
-                $btnHtml = '';
-            }
-
-            $html = sprintf('<div class="field_main"><div class="'.$args['classname'].'" ><input  type="text" class="%1$s-text wp-color-picker-field" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s" data-default-color="%5$s" />', $size, $args['section'], $args['id'], $value, $args['std']);
-            $html .= $this->get_field_description($args). '</div>'. $btnHtml.'</div>';
+            $html = sprintf('<div class="'.$args['classname'].'" ><input  type="text" class="%1$s-text wp-color-picker-field" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s" data-default-color="%5$s" />', $size, $args['section'], $args['id'], $value, $args['std']);
+            $html .= $this->get_field_description($args). '</div>';
 
             echo $html;
         }
@@ -448,21 +429,15 @@ if (!class_exists('WeDevs_Settings_API')):
             $value_mid = esc_attr($this->get_option($args['id'] . '_mid', $args['section'], $args['std']['mid']));
             $value_end = esc_attr($this->get_option($args['id'] . '_end', $args['section'], $args['std']['end']));
             $size = isset($args['size']) && !is_null($args['size']) ? $args['size'] : 'regular';
-
-            if($args['classname'] == "free"){
-                $btnHtml = '<span class="popupBtn" id="popupBtn">Premium</span>';
-            }else{
-                $btnHtml = '';
-            }
               
-            echo '<div class="field_main"><div class='.$args['classname'].'>';
+            echo '<div class='.$args['classname'].'>';
             echo '<input type="text" class="' . $size . '-text wp-color-picker-field" id="' . $args['section'] . '[' . $args['id'] . ']" name="' . $args['section'] . '[' . $args['id'] . ']" value="' . $value_start . '" data-default-color="' . $args['std']['start'] . '" />';
             echo '<span class="gradient-color-separator"></span>';
             echo '<input type="text" class="' . $size . '-text wp-color-picker-field" id="' . $args['section'] . '[' . $args['id'] . '_mid]" name="' . $args['section'] . '[' . $args['id'] . '_mid]" value="' . $value_mid . '" data-default-color="' . $args['std']['mid'] . '" />';
             echo '<span class="gradient-color-separator"></span>';
             echo '<input type="text" class="' . $size . '-text wp-color-picker-field" id="' . $args['section'] . '[' . $args['id'] . '_end]" name="' . $args['section'] . '[' . $args['id'] . '_end]" value="' . $value_end . '" data-default-color="' . $args['std']['end'] . '" />';
             echo $this->get_field_description($args);
-            echo "</div>".$btnHtml."</div>";
+            echo "</div>";
         }
 
 

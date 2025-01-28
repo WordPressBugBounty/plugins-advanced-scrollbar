@@ -161,7 +161,7 @@ if (!class_exists('WeDevs_Settings_API_Test')):
                     ),
                     array(
                         'name' => 'asb_gradient_color',
-                        'label' => __('Full Height Scrollbar Gradient Color', 'wedevs'),
+                        'label' => __('Full Height Scrollbar Gredient Color', 'wedevs'),
                         'desc' => __('Change Scrollbar Color.', 'wedevs'),
                         'type' => 'gradient_color',
                         'classname'=>$className,
