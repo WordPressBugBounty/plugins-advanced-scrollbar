@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: Color Scrollbar, custom scroll, nice scrollbar, scrollbar, customizer
 Requires at least: 6.5+
 Tested up to: 6.7.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -114,6 +114,9 @@ Yes, You can do that.
 
 
 == Changelog ==
+
+= 1.1.5 - 11 April, 2025 =
+* Some problem fixed;
 
 = 1.1.4 - 28 Jan, 2025 =
 * Update freemius sdk

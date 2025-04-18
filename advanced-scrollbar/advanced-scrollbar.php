@@ -4,7 +4,7 @@
  * Plugin Name: Advanced scrollbar
  * Author URI: http://bplugins.com
  * Description: Customize scrollbar of your website with unlimited styling and color using the plugin. 
- * Version: 1.1.4
+ * Version: 1.1.5
  * Author: bPlugins
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
